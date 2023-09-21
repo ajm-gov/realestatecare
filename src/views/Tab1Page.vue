@@ -1,16 +1,16 @@
 <template>
   <ion-page>
-    <ion-header>
+    <!-- <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+        <img width="180" src="@/assets/logos/logo_horizontal.svg" alt="Real Estate Care Logo Horizontal">
       </ion-toolbar>
-    </ion-header>
+    </ion-header> -->
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+      <!-- <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
-      </ion-header>
+      </ion-header> -->
 
       <ExploreContainer name="Tab 1 page" />
     </ion-content>

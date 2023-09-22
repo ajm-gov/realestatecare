@@ -4,10 +4,10 @@
         <ion-title size="small"><img width="180" src="@/assets/logos/logo_horizontal.svg" alt="Real Estate Care Logo Horizontal"></ion-title>
         <ion-buttons color="primary" slot="secondary">
           <ion-button color="primary">
-            <ion-icon color="primary" slot="icon-only" :icon="personCircle"></ion-icon>
+            <ion-icon color="primary" slot="icon-only" :icon="notificationsOutline"></ion-icon>
           </ion-button>
           <ion-button>
-            <ion-icon slot="icon-only" :icon="search"></ion-icon>
+            <ion-icon slot="icon-only" :icon="settingsSharp"></ion-icon>
           </ion-button>
          </ion-buttons>
       </ion-toolbar>
@@ -50,8 +50,8 @@
     } from "@ionic/vue";
 
     import {
-        personCircle,
-        search,
+        settingsSharp,
+        notificationsOutline,
         triangle,
         ellipse,
         square

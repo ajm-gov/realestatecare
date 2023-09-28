@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "date": "2023-03-20T09:30+01:00",
+        "clientName": "Bruckhook Industries",
+        "jobSpecification": "Check out Damage",
+        "Location": "Rotterdam"
+    },
+    {
+        "id": 2,
+        "date": "2023-05-10T14:15+02:00",
+        "jobSpecification": "Check out Damage",
+        "Location": "Rotterdam"
+    },
+    {
+        "id": 3,
+        "date": "2023-08-07T11:00+02:00",
+        "jobSpecification": "Check in on deferred maintenance",
+        "Location": "Breda"
+    },
+    {
+        "id": 4,
+        "date": "2023-09-15T16:45+02:00",
+        "jobSpecification": "Inspection of technical appliances and installations",
+        "Location": "Roosendaal"
+    },
+    {
+        "id": 5,
+        "date": "2023-11-28T10:20+01:00",
+        "jobSpecification": "Take inventory of modifications to property",
+        "Location": "Tilburg"
+    }
+]

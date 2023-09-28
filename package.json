@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "database": "json-server --watch db.json",
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
@@ -20,6 +21,7 @@
     "@ionic/vue": "^7.0.0",
     "@ionic/vue-router": "^7.0.0",
     "ionicons": "^7.0.0",
+    "json-server": "^0.17.3",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },

@@ -1,19 +1,13 @@
 <template>
     <Layout>
             <ion-content>
-                <ion-card class="headerCard">
-                    <ion-card-content color="light">
-                        <ion-badge color="light">11</ion-badge>
-                        <ion-label>Open tasks for you today</ion-label>
-                        <ion-text color="light">Hello Fred</ion-text>
-                    </ion-card-content>
-                </ion-card>
+                <PersonalInfoCard />
                 <ion-row>
                     <ion-col>
                         <ion-card>
                             <ion-card-content>
                                 <ion-icon :icon="calendarNumberOutline"></ion-icon>
-                                <ion-card-subtitle>Scheduled</ion-card-subtitle>
+                                <ion-card-subtitle class="bold">Scheduled</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
                     </ion-col>
@@ -21,7 +15,7 @@
                         <ion-card>
                             <ion-card-content>
                                 <ion-icon :icon="shieldCheckmarkOutline"></ion-icon>
-                                <ion-card-subtitle>Completed</ion-card-subtitle>
+                                <ion-card-subtitle class="bold">Completed</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
                     </ion-col>
@@ -31,7 +25,7 @@
                         <ion-card>
                             <ion-card-content>
                                 <ion-icon :icon="settingsSharp"></ion-icon>
-                                <ion-card-subtitle>Knowledge Base</ion-card-subtitle>
+                                <ion-card-subtitle class="bold">Knowledge Base</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
                     </ion-col>
@@ -39,7 +33,7 @@
                         <ion-card>
                              <ion-card-content>
                                 <ion-icon :icon="informationCircleOutline"></ion-icon>
-                                <ion-card-subtitle>Settings</ion-card-subtitle>
+                                <ion-card-subtitle class="bold">Settings</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
                     </ion-col>
@@ -77,9 +71,6 @@ import {
     IonCol, 
     IonIcon, 
     IonCardSubtitle,
-    IonText,
-    IonBadge,
-    IonLabel
 } from '@ionic/vue';
 
 import { 
@@ -89,4 +80,5 @@ import {
     informationCircleOutline 
 } from 'ionicons/icons';
 import Layout from '@/components/Layout.vue';
+import PersonalInfoCard from '@/components/PersonalInfoCard.vue';
 </script>

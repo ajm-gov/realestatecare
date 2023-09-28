@@ -1,0 +1,10 @@
+/* Typography */
+
+.bold {
+    font-weight: 600;
+}
+
+/* Spacing */
+.smallGap {
+    gap: 0.5rem;
+}

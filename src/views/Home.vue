@@ -38,7 +38,7 @@
                         </ion-card>
                     </ion-col>
                 </ion-row>
-
+                <CompletedJobList />
             </ion-content>
     </Layout>
 </template>
@@ -81,4 +81,5 @@ import {
 } from 'ionicons/icons';
 import Layout from '@/components/Layout.vue';
 import PersonalInfoCard from '@/components/PersonalInfoCard.vue';
+import CompletedJobList from '@/components/completedjoblist/CompletedJobList.vue';
 </script>

@@ -1,13 +1,3 @@
-export interface completedJob {
-    id: number;
-    date: string;
-    clientName: string;
-    jobSpecification: string;
-    location: string;
-    notes: string;
-    jobDetails: modificationDetails | damageDetails | maintenanceDetails | inspectionDetails;
-}
-
 export interface modificationDetails {
     documentedModifications: string,
     modifiedBy: string,

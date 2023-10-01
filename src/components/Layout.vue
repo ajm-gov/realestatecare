@@ -2,7 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title size="small"><img width="180" src="@/assets/logos/logo_horizontal.svg" alt="Real Estate Care Logo Horizontal"></ion-title>
+        <a href="/">
+          <ion-title size="small"><img width="180" src="@/assets/logos/logo_horizontal.svg" alt="Real Estate Care Logo Horizontal"></ion-title>
+        </a>
         <ion-buttons color="primary" slot="secondary">
           <ion-button color="primary">
             <ion-icon color="primary" slot="icon-only" :icon="notificationsOutline"></ion-icon>
@@ -13,8 +15,9 @@
          </ion-buttons>
       </ion-toolbar>
     </ion-header>
-    <slot></slot>
-    <BottomTabs />
+    <ion-content>
+      <slot></slot>
+    </ion-content>
   </ion-page>
 </template>
 
@@ -27,6 +30,7 @@
         IonButton,
         IonIcon,
         IonPage,
+        IonContent,
     } from "@ionic/vue";
 
     import {

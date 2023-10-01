@@ -4,36 +4,78 @@
             "id": 1,
             "date": "2023-03-20T09:30+01:00",
             "clientName": "Bruckhook Industries",
-            "jobSpecification": "Check out Damage",
-            "location": "Rotterdam"
+            "jobSpecification": "damage",
+            "location": "Rotterdam",
+            "notes": "None",
+            "jobDetails": [
+                {
+                    "newDamage": true,
+                    "typeDamage": "Wear and  Tear",
+                    "directActionRequired": true
+                }
+            ]
         },
         {
             "id": 2,
             "date": "2023-05-10T14:15+02:00",
             "clientName": "Appel & Peer BV",
-            "jobSpecification": "Check out Damage",
-            "location": "Rotterdam"
+            "jobSpecification": "damage",
+            "location": "Rotterdam",
+            "notes": "None",
+            "jobDetails": [
+                {
+                    "newDamage": true,
+                    "typeDamage": "Wear and  Tear",
+                    "directActionRequired": true
+                }
+            ]
         },
         {
             "id": 3,
             "date": "2023-08-07T11:00+02:00",
             "clientName": "Molenkamp Databeheer",
-            "jobSpecification": "Check in on deferred maintenance",
-            "location": "Breda"
+            "jobSpecification": "maintenance",
+            "location": "Breda",
+            "notes": "None",
+            "jobDetails": [
+                {
+                    "typeMaintenance": "Electricity",
+                    "directActionRequired": true,
+                    "costIndication": "0-500"
+                }
+            ]
         },
         {
             "id": 4,
             "date": "2023-09-15T16:45+02:00",
             "clientName": "Klaas & Zn BV",
-            "jobSpecification": "Inspection of technical appliances and installations",
-            "location": "Roosendaal"
+            "jobSpecification": "inspection",
+            "location": "Roosendaal",
+            "notes": "None",
+            "jobDetails": [
+                {
+                    "typeInstallation": "Security",
+                    "reportedDefect": "Lorem Ipsum",
+                    "testingProcedure": "https://www.google.com/",
+                    "approved": false
+                }
+            ]
         },
         {
             "id": 5,
             "date": "2023-11-28T10:20+01:00",
             "clientName": "DataDudes BV",
-            "jobSpecification": "Take inventory of modifications to property",
-            "location": "Tilburg"
+            "jobSpecification": "modification",
+            "location": "Tilburg",
+            "notes": "None",
+            "jobDetails": [
+                {
+                    "documentedModifications": "https://www.google.com/",
+                    "modifiedBy": "Unknown",
+                    "modificationDetails": "4 holes drilled in south wall kitchen.",
+                    "nextAction": "Removal"
+                }
+            ]
         }
     ]
 }

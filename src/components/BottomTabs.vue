@@ -1,4 +1,5 @@
 <template>
+  <ion-page>
       <ion-tabs>
         <ion-router-outlet></ion-router-outlet>
         <ion-tab-bar slot="bottom">
@@ -7,7 +8,7 @@
             <ion-label>Scheduled Jobs</ion-label>
           </ion-tab-button>
   
-          <ion-tab-button tab="tab2" href="/tabs/tab2">
+          <ion-tab-button tab="tab2" href="/jobs/completed">
             <ion-icon aria-hidden="true" :icon="shieldCheckmarkOutline" />
             <ion-label>Completed Jobs</ion-label>
           </ion-tab-button>
@@ -18,6 +19,7 @@
           </ion-tab-button>
         </ion-tab-bar>
       </ion-tabs>
+    </ion-page>
   </template>
   
   <script setup lang="ts">
@@ -27,7 +29,8 @@
     IonTabs, 
     IonLabel, 
     IonIcon, 
-    IonRouterOutlet 
+    IonRouterOutlet,
+    IonPage
   } from '@ionic/vue';
 
   import { 

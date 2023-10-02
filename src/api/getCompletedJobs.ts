@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getCompletedJobs = async () => {
-    const completedJobsUrl = "http://localhost:3000/jobs"; // Replace later with .env file
+    const completedJobsUrl = "https://my-json-server.typicode.com/ajm-gov/realestatecare/jobs"; // Replace later with .env file
 
     try {
         const response = await axios.get(completedJobsUrl);
@@ -13,7 +13,7 @@ export const getCompletedJobs = async () => {
 };
 
 export const getCompletedJobDetails = async (id: number) => {
-    const completedJobsDetailUrl = `http://localhost:3000/jobs/${id}`; // replace later with .env file
+    const completedJobsDetailUrl = `https://my-json-server.typicode.com/ajm-gov/realestatecare/jobs/${id}`; // replace later with .env file
 
     try {
         const response = await axios.get(completedJobsDetailUrl);

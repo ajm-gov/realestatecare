@@ -6,7 +6,7 @@
             "clientName": "Bruckhook Industries",
             "jobSpecification": "damage",
             "location": "Rotterdam",
-            "notes": "None",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
             "jobDetails": [
                 {
                     "newDamage": true,
@@ -21,7 +21,7 @@
             "clientName": "Appel & Peer BV",
             "jobSpecification": "damage",
             "location": "Rotterdam",
-            "notes": "None",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
             "jobDetails": [
                 {
                     "newDamage": true,
@@ -36,7 +36,7 @@
             "clientName": "Molenkamp Databeheer",
             "jobSpecification": "maintenance",
             "location": "Breda",
-            "notes": "None",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
             "jobDetails": [
                 {
                     "typeMaintenance": "Electricity",
@@ -51,7 +51,7 @@
             "clientName": "Klaas & Zn BV",
             "jobSpecification": "inspection",
             "location": "Roosendaal",
-            "notes": "None",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
             "jobDetails": [
                 {
                     "typeInstallation": "Security",
@@ -67,7 +67,7 @@
             "clientName": "DataDudes BV",
             "jobSpecification": "modification",
             "location": "Tilburg",
-            "notes": "None",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
             "jobDetails": [
                 {
                     "documentedModifications": "https://www.google.com/",

@@ -4,7 +4,24 @@
     font-weight: 600;
 }
 
+.bareLink {
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 /* Spacing */
 .smallGap {
     gap: 0.5rem;
 }
+
+.marginRightSmall {
+    margin-right: 0.5rem;
+}
+
+.marginBottomSmall {
+    margin-bottom: 0.5rem;
+}
+

@@ -38,7 +38,6 @@
                         </ion-card>
                     </ion-col>
                 </ion-row>
-
             </ion-content>
     </Layout>
 </template>

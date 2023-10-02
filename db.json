@@ -1,0 +1,81 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "date": "2023-03-20T09:30+01:00",
+            "clientName": "Bruckhook Industries",
+            "jobSpecification": "damage",
+            "location": "Rotterdam",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
+            "jobDetails": [
+                {
+                    "newDamage": true,
+                    "typeDamage": "Wear and  Tear",
+                    "directActionRequired": true
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "date": "2023-05-10T14:15+02:00",
+            "clientName": "Appel & Peer BV",
+            "jobSpecification": "damage",
+            "location": "Rotterdam",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
+            "jobDetails": [
+                {
+                    "newDamage": true,
+                    "typeDamage": "Wear and  Tear",
+                    "directActionRequired": true
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "date": "2023-08-07T11:00+02:00",
+            "clientName": "Molenkamp Databeheer",
+            "jobSpecification": "maintenance",
+            "location": "Breda",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
+            "jobDetails": [
+                {
+                    "typeMaintenance": "Electricity",
+                    "directActionRequired": true,
+                    "costIndication": "0-500"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "date": "2023-09-15T16:45+02:00",
+            "clientName": "Klaas & Zn BV",
+            "jobSpecification": "inspection",
+            "location": "Roosendaal",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
+            "jobDetails": [
+                {
+                    "typeInstallation": "Security",
+                    "reportedDefect": "Lorem Ipsum",
+                    "testingProcedure": "https://www.google.com/",
+                    "approved": false
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "date": "2023-11-28T10:20+01:00",
+            "clientName": "DataDudes BV",
+            "jobSpecification": "modification",
+            "location": "Tilburg",
+            "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis eu lacus sollicitudin mollis sed in libero. Maecenas tellus est, rhoncus vitae diam sed, blandit venenatis leo. In eget posuere risus, sed commodo neque. Ut aliquam libero sed sapien porttitor laoreet. Nunc rhoncus quis dui at consequat.",
+            "jobDetails": [
+                {
+                    "documentedModifications": "https://www.google.com/",
+                    "modifiedBy": "Unknown",
+                    "modificationDetails": "4 holes drilled in south wall kitchen.",
+                    "nextAction": "Removal"
+                }
+            ]
+        }
+    ]
+}

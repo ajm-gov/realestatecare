@@ -6,7 +6,7 @@
             </ion-text>
             <ion-accordion-group>
                 <ion-accordion v-for="item in completedJobs" :key="item.id">
-                    <ion-item slot="header" color="light">
+                    <ion-item slot="header">
                         <ion-label>{{ item.clientName }}, {{  readableDate(item.date) }}</ion-label>
                     </ion-item>
                         <div class="ion-padding" slot="content">
@@ -22,6 +22,37 @@
                                 <ion-text class="underline"><h5>Notes</h5></ion-text>
                                 <ion-text class="marginBottomSmall">{{ item.notes }}</ion-text>
                             </ion-row>
+                            <ion-row>
+                                <ion-col>                                <ion-accordion-group>
+                                    <ion-accordion>
+                                        <ion-item slot="header">
+                                            <ion-label>Job details</ion-label>
+                                        </ion-item>
+                                        <div class="ion-padding" slot="content">
+                                            <ion-row><ion-text v-if="item.jobDetails.modificationDetails">Modification details: {{ item.jobDetails.modificationDetails }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.modifiedBy">Modification by: {{ item.jobDetails.modifiedBy }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.documentedModifications">Link to documented modifications: {{ item.jobDetails.documentedModifications }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.nextAction">Next action: {{ item.jobDetails.nextAction }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.newDamage">Is damage new?: {{ booleanYesOrNo(item.jobDetails.newDamage) }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.typeDamage">Damage type: {{ item.jobDetails.typeDamage }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.directActionRequired">Direct action required?: {{ booleanYesOrNo(item.jobDetails.directActionRequired) }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.typeMaintenance">Maintenance type: {{ item.jobDetails.typeMaintenance }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.costIndication">Cost indication: {{ item.jobDetails.costIndication }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.typeInstallation">Installation type: {{ item.jobDetails.typeInstallation }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.reportedDefect">Reported defect: {{ item.jobDetails.reportedDefect }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.testingProcedure">Testing procedure: {{ item.jobDetails.testingProcedure }}</ion-text></ion-row>
+                                            <ion-row><ion-text v-if="item.jobDetails.approved">Approved?: {{ booleanYesOrNo(item.jobDetails.approved) }}</ion-text></ion-row>
+
+
+                                        
+                                        </div>
+                                    </ion-accordion>
+                                </ion-accordion-group>
+
+                            </ion-col>
+
+
+                                </ion-row>
                         </div>
                 </ion-accordion>
             </ion-accordion-group>
@@ -29,6 +60,15 @@
         </ion-row>
     </ion-grid>
 </template>
+
+<style scoped>
+    ion-item[slot='header'] {
+        background-color: white;
+        border-bottom: 2px solid var(--ion-color-primary);
+        font-size: 1.1rem;
+        padding: 0;
+    }
+</style>
 
 <script setup lang="ts">
     import { ref, onMounted } from 'vue';
@@ -51,7 +91,7 @@
     import { completedJob } from '@/types/completedjob'
     import { RouterLink } from 'vue-router';
     import {readableDate} from '@/utils/readDate';
-    import { jobSpecification } from '@/utils/transformMessage';
+    import { jobSpecification, booleanYesOrNo } from '@/utils/transformMessage';
 
     const completedJobs = ref<completedJob[]>([]);
 
@@ -72,4 +112,5 @@
             console.error('Error fetching Completed Jobs:', error);
         }
     });
+
 </script>

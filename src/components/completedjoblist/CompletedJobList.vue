@@ -22,13 +22,13 @@
                                 <ion-text class="underline"><h5>Notes</h5></ion-text>
                                 <ion-text class="marginBottomSmall">{{ item.notes }}</ion-text>
                             </ion-row>
-                            <ion-row>
-                                <ion-col>                                <ion-accordion-group>
+                   
+                             <ion-accordion-group>
                                     <ion-accordion>
-                                        <ion-item slot="header">
+                                        <ion-item slot="header" class="secondaryAccordion" color="primary">
                                             <ion-label>Job details</ion-label>
                                         </ion-item>
-                                        <div class="ion-padding" slot="content">
+                                        <div class="contentPadding" slot="content">
                                             <ion-row><ion-text v-if="item.jobDetails.modificationDetails">Modification details: {{ item.jobDetails.modificationDetails }}</ion-text></ion-row>
                                             <ion-row><ion-text v-if="item.jobDetails.modifiedBy">Modification by: {{ item.jobDetails.modifiedBy }}</ion-text></ion-row>
                                             <ion-row><ion-text v-if="item.jobDetails.documentedModifications">Link to documented modifications: {{ item.jobDetails.documentedModifications }}</ion-text></ion-row>
@@ -49,10 +49,7 @@
                                     </ion-accordion>
                                 </ion-accordion-group>
 
-                            </ion-col>
 
-
-                                </ion-row>
                         </div>
                 </ion-accordion>
             </ion-accordion-group>
@@ -67,6 +64,12 @@
         border-bottom: 2px solid var(--ion-color-primary);
         font-size: 1.1rem;
         padding: 0;
+    }
+
+    ion-item[slot='header'].secondaryAccordion {
+        border-radius: 50px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 </style>
 

@@ -12,12 +12,14 @@
                         </ion-card>
                     </ion-col>
                     <ion-col>
+                        <a class="bareLink" href="/jobs/completed">
                         <ion-card>
                             <ion-card-content>
                                 <ion-icon :icon="shieldCheckmarkOutline"></ion-icon>
                                 <ion-card-subtitle class="bold">Completed</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
+                        </a>
                     </ion-col>
                 </ion-row>
                 <ion-row>

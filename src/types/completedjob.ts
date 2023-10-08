@@ -1,11 +1,25 @@
 export interface completedJob {
-    id: number;
-    date: string;
-    clientName: string;
-    jobSpecification: string;
-    location: string;
-    notes: string;
-    jobDetails: modificationDetails | damageDetails | maintenanceDetails | inspectionDetails;
+    id: number,
+    date: string,
+    clientName: string,
+    jobSpecification: string,
+    location: string,
+    notes: string,
+    jobDetails: {
+        documentedModifications?: string,
+        modifiedBy: string,
+        modificationDetails: string,
+        nextAction: string,
+        newDamage?: boolean,
+        typeDamage?: string,
+        directActionRequired?: boolean,
+        typeMaintenance?: string,
+        costIndication?: string,
+        typeInstallation?: string,
+        reportedDefect?: string,
+        testingProcedure?: string,
+        approved?: boolean,
+    }
 }
 
 export interface modificationDetails {

@@ -18,3 +18,10 @@ export const jobSpecification = (jobSpecification: string) => {
     }
     return jobType;
 }
+
+export const booleanYesOrNo = (booleanValue: boolean) => {
+    if (booleanValue === true) {
+        return "Yes"
+    } 
+    return "No"
+}

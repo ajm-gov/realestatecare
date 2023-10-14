@@ -26,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+  {
+    path: '/auth/login',
+    name: 'loginScreen',
+    component: () => import("@/views/LoginScreen.vue"),
+  }
 ];
 
 const router = createRouter({

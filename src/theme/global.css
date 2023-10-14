@@ -12,6 +12,8 @@
     text-decoration: underline;
 }
 
+
+
 /* Spacing */
 .smallGap {
     gap: 0.5rem;
@@ -23,6 +25,10 @@
 
 .marginBottomSmall {
     margin-bottom: 0.5rem;
+}
+
+.marginBottomMedium {
+    margin-bottom: 1rem;
 }
 
 .contentPadding {

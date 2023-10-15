@@ -67,5 +67,23 @@
                 "nextAction": "Removal"
             }
         }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "email": "rob.bradford@realestatecare.nl",
+            "password": "lookthisisapassword123",
+            "authenticationCode": 146589,
+            "firstName": "Rob",
+            "lastName": "Bradford"
+        },
+        {
+            "id": 2,
+            "email": "suze.allington@realestatecare.nl",
+            "password": "lookthisisapassword123",
+            "authenticationCode": 232342,
+            "firstName": "Suze",
+            "lastName": "Allington"           
+        }
     ]
 }

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
+import { loginStatusStore } from '@/stores/loginStatus';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -36,6 +37,19 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
+})
+
+// Authentication middleware
+router.beforeEach(async (to, from, next) => {
+  const store = loginStatusStore();
+
+  if (
+    !store.loggedIn && to.name !== "loginScreen"
+  ) {
+    next("/auth/login")
+  } else {
+    next()
+  }
 })
 
 export default router

@@ -43,11 +43,14 @@ const router = createRouter({
 router.beforeEach(async (to, from, next) => {
   const store = loginStatusStore();
 
-  if (
-    !store.loggedIn && to.name !== "loginScreen"
-  ) {
+  if (!store.loggedIn && to.name !== "loginScreen") {
+    console.log('Redirecting to login')
     next("/auth/login")
+  } else if (store.loggedIn && to.name === "loginScreen") {
+    console.log('Home')
+    next("/home")
   } else {
+    console.log('Allowing navigation')
     next()
   }
 })

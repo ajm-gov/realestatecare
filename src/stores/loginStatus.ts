@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { userInterface } from "@/types/stateManagement";
+import { userInterface } from "@/types/user";
 
 export const loginStatusStore = defineStore('loginStatus', {
     state: () => {

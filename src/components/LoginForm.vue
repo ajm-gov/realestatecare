@@ -3,8 +3,10 @@
         <ion-row>
             <img width="280" src="@/assets/logos/logo_horizontal.svg" alt="Real Estate Care Logo Horizontal">
         </ion-row>
-            <form method="POST">
+            <form @submit.prevent="loginUser">
                 <ion-input
+                    v-model="email"
+                    name="email"
                     ref="input"
                     type="email"
                     fill="solid"
@@ -13,6 +15,8 @@
                     error-text="Invalid Email, try again"
                 />
                 <ion-input 
+                    v-model="password"
+                    name="password"
                     ref="input"
                     type="password"
                     fill="solid"
@@ -20,6 +24,8 @@
                     label-placement="floating"
                 />
                 <ion-input 
+                    v-model="authCode"
+                    name="authCode"
                     ref="input"
                     type="number"
                     fill="solid"
@@ -96,30 +102,29 @@
 </style>
 
 <script setup lang="ts">
-import { defineComponent, ref } from "vue";
+import { ref } from "vue";
+import { authenticateUser } from "@/utils/authUser"
+import { loginStatusStore } from "@/stores/loginStatus"
+import router from "@/router"
 
 import { 
-  IonTabBar, 
-  IonTabButton, 
-  IonTabs, 
-  IonLabel, 
   IonIcon, 
-  IonRouterOutlet,
-  IonPage,
   IonRow,
-  IonCol,
   IonInput,
   IonButton,
   IonAlert,
-  actionSheetController,
   IonActionSheet
 } from '@ionic/vue';
 
 import { 
   logInOutline,
   helpBuoyOutline,
-compassSharp
 } from 'ionicons/icons';
+import { routerKey } from "vue-router";
+
+let email = ref('');
+let password = ref('');
+let authCode = ref('');
 
 const alertButtons = [{
     type: 'submit',
@@ -141,9 +146,6 @@ const alertInputs = [
 const twoFactorCode = ref("");
 const showAlert = ref(false);
 
-const showTwoFactorAuth = () => {
-    showAlert.value = true
-}
 
 const actionSheetButtons = [
     {
@@ -181,8 +183,14 @@ const setAuthenticationMethod = (ev: CustomEvent) => {
     }
 }
 
-const testClick = () => {
-    console.log("button clicked")
+const loginUser = async () => {
+    console.log(email, password, authCode)
+    await authenticateUser(email.value, password.value, authCode.value); 
+
+    if (loginStatusStore().loggedIn) {
+        console.log("Succesful login!");
+        router.push("/home")
+    }
 }
 
 // const logAuthResult = (ev: CustomEvent) => {

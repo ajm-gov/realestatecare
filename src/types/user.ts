@@ -1,5 +1,7 @@
 export interface userInterface {
     email: string,
     password: string,
-    authenticationCode: number
+    authenticationCode: number,
+    firstName: string,
+    lastName: string,
 }

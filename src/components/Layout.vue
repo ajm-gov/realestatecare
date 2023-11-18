@@ -2,9 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <a href="/">
-          <ion-title size="small"><img width="180" src="@/assets/logos/logo_horizontal.svg" alt="Real Estate Care Logo Horizontal"></ion-title>
-        </a>
+          <ion-title router-link="/" size="small"><img width="180" src="@/assets/logos/logo_horizontal.svg" alt="Real Estate Care Logo Horizontal"></ion-title>
         <ion-buttons color="primary" slot="secondary">
           <ion-button color="primary">
             <ion-icon color="primary" slot="icon-only" :icon="notificationsOutline"></ion-icon>

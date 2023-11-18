@@ -120,7 +120,6 @@ import {
   logInOutline,
   helpBuoyOutline,
 } from 'ionicons/icons';
-import { routerKey } from "vue-router";
 
 let email = ref('');
 let password = ref('');
@@ -144,7 +143,6 @@ const alertInputs = [
 ]
 
 const twoFactorCode = ref("");
-const showAlert = ref(false);
 
 
 const actionSheetButtons = [
@@ -192,9 +190,5 @@ const loginUser = async () => {
         router.push("/home")
     }
 }
-
-// const logAuthResult = (ev: CustomEvent) => {
-//     console.log(JSON.stringify(ev.detail.data.action, null, 2));
-// };
 
 </script>

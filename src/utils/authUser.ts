@@ -1,7 +1,7 @@
 import { userInterface } from "@/types/user";
 import { getAllUsers } from "@/api/getUsers";
 import { loginStatusStore } from "@/stores/loginStatus";
-
+import { userDetailsStore } from "@/stores/userDetails";
 
 
 export async function authenticateUser(email: string, password: string, authCode: string) {
@@ -19,6 +19,7 @@ export async function authenticateUser(email: string, password: string, authCode
 
     if (user) {
         loginStatusStore().loginUser()
+        userDetailsStore().setUserInfo(user.firstName, user.lastName)
     } else {
         console.error("Authentication failed!")
     }

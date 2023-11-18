@@ -42,7 +42,7 @@ const router = createRouter({
 // Authentication middleware
 router.beforeEach(async (to, from, next) => {
   const store = loginStatusStore();
-
+  console.log(store)
   if (!store.loggedIn && to.name !== "loginScreen") {
     console.log('Redirecting to login')
     next("/auth/login")

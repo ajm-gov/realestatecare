@@ -70,6 +70,5 @@ ion-content {
         notificationsOutline,
     } from "ionicons/icons"
 
-  import BottomTabs from "./BottomTabs.vue";
 
 </script>

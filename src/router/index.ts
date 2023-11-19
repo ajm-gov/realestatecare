@@ -25,6 +25,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/CompletedIndividualJob.vue'),
         props: true,
       },
+      {
+        path: '/knowledge-base',
+        component: () => import('@/views/KnowledgeBase.vue')
+      }
     ],
   },
   {
@@ -39,20 +43,20 @@ const router = createRouter({
   routes
 })
 
-// Authentication middleware
-router.beforeEach(async (to, from, next) => {
-  const store = loginStatusStore();
-  console.log(store)
-  if (!store.loggedIn && to.name !== "loginScreen") {
-    console.log('Redirecting to login')
-    next("/auth/login")
-  } else if (store.loggedIn && to.name === "loginScreen") {
-    console.log('Home')
-    next("/home")
-  } else {
-    console.log('Allowing navigation')
-    next()
-  }
-})
+// // Authentication middleware
+// router.beforeEach(async (to, from, next) => {
+//   const store = loginStatusStore();
+//   console.log(store)
+//   if (!store.loggedIn && to.name !== "loginScreen") {
+//     console.log('Redirecting to login')
+//     next("/auth/login")
+//   } else if (store.loggedIn && to.name === "loginScreen") {
+//     console.log('Home')
+//     next("/home")
+//   } else {
+//     console.log('Allowing navigation')
+//     next()
+//   }
+// })
 
 export default router

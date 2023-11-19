@@ -6,7 +6,7 @@
                     <ion-avatar>
                         <img src="@/assets/img/fred.jpeg" width="">
                     </ion-avatar>
-                    <ion-label class="bold" color="light">Hello Fred</ion-label>
+                    <ion-label class="bold" color="light">{{ nameString() }}</ion-label>
                 </ion-chip>
             </ion-row>
             <ion-chip class="bold smallGap">
@@ -28,10 +28,16 @@ import {
     IonChip,
 } from '@ionic/vue';
 
-import { 
-    settingsSharp, 
-    shieldCheckmarkOutline, 
-    calendarNumberOutline, 
-    informationCircleOutline 
-} from 'ionicons/icons';
+import { userDetailsStore } from '@/stores/userDetails';
+
+const store = userDetailsStore();
+
+const nameString = () => {
+    if (store.firstName !== "") {
+        return `Hello ${store.firstName} ${store.lastName}`
+    } else {
+        return "Hello user"
+    }
+}
+
 </script>

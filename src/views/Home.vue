@@ -12,19 +12,17 @@
                         </ion-card>
                     </ion-col>
                     <ion-col>
-                        <a class="bareLink" href="/jobs/completed">
-                        <ion-card>
+                        <ion-card router-link="/jobs/completed">
                             <ion-card-content>
                                 <ion-icon :icon="shieldCheckmarkOutline"></ion-icon>
                                 <ion-card-subtitle class="bold">Completed</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
-                        </a>
                     </ion-col>
                 </ion-row>
                 <ion-row>
                     <ion-col>
-                        <ion-card>
+                        <ion-card router-link="/knowledge-base">
                             <ion-card-content>
                                 <ion-icon :icon="settingsSharp"></ion-icon>
                                 <ion-card-subtitle class="bold">Knowledge Base</ion-card-subtitle>

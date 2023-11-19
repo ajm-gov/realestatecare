@@ -76,8 +76,6 @@
 <script setup lang="ts">
     import { ref, onMounted } from 'vue';
     import { 
-        IonList,
-        IonListHeader,
         IonLabel,
         IonItem,
         IonRow,
@@ -92,7 +90,6 @@
 
     import { getCompletedJobs, getCompletedJobDetails } from '@/api/getCompletedJobs';
     import { completedJob } from '@/types/completedjob'
-    import { RouterLink } from 'vue-router';
     import {readableDate} from '@/utils/readDate';
     import { jobSpecification, booleanYesOrNo } from '@/utils/transformMessage';
 

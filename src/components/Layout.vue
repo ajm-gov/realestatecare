@@ -7,7 +7,7 @@
           <ion-button color="primary">
             <ion-icon color="primary" slot="icon-only" :icon="notificationsOutline"></ion-icon>
           </ion-button>
-          <ion-button>
+          <ion-button router-link="/settings">
             <ion-icon slot="icon-only" :icon="settingsSharp"></ion-icon>
           </ion-button>
          </ion-buttons>

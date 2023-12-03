@@ -28,6 +28,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/knowledge-base',
         component: () => import('@/views/KnowledgeBase.vue')
+      }, 
+      {
+        path: '/settings',
+        component: () => import('@/views/Settings.vue')
       }
     ],
   },

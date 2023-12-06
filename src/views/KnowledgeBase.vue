@@ -1,11 +1,9 @@
 
 <template>
-<h1>
     <Layout>
         <KnowledgeSearchBar />
         <KnowledgeArticleGrid />
     </Layout>
-</h1>
 </template>
 
 <script setup lang="ts">

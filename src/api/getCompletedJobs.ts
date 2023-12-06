@@ -1,8 +1,10 @@
 import axios from 'axios';
+import { JSON_DB_BASE_URL } from '@/utils/constants';
 
 export const getCompletedJobs = async () => {
-    const completedJobsUrl = "https://my-json-server.typicode.com/ajm-gov/realestatecare/jobs/"; // Replace later with .env file
 
+    const completedJobsUrl = `${JSON_DB_BASE_URL}/jobs/`; // Replace later with .env file
+    console.log(completedJobsUrl);
     try {
         const response = await axios.get(completedJobsUrl);
         return response.data;

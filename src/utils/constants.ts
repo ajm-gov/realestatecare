@@ -1,0 +1,1 @@
+export const JSON_DB_BASE_URL = import.meta.env.VITE_JSON_DB_BASE_URL;

@@ -92,6 +92,7 @@
             "date_created": "2023-12-05T09:30+01:00",
             "date_to_complete": "2023-12-20T09:30+01:00",
             "jobSpecification": "damage",
+            "company": "AON",
             "location": "Rotterdam",
             "notes": "Damage to boiler in main basement room of the building. Renter manually tried to adjust it and one of the pipes bursted."
         },
@@ -99,6 +100,7 @@
             "id": 2,
             "date_created": "2023-12-02T09:30+01:00",
             "date_to_complete": "2023-12-12T09:30+01:00",
+            "company": "HallHuize B.V.",
             "jobSpecification": "maintenance",
             "location": "Delft",
             "notes": "Complaint from the renter about paint chipping off front-edge of the building. Send out inspector to report maintenance to be completed."
@@ -107,6 +109,7 @@
             "id": 3,
             "date_created": "2023-11-28T09:30+01:00",
             "date_to_complete": "2023-12-05T09:30+01:00",
+            "company": "AmsterElectric",
             "jobSpecification": "inspection",
             "location": "Amsterdam",
             "notes": "Annual inspection of Solar Panels on top of Hotel. No damage reported but full inspection required. Leave signed certificate at front-desk if completed, or quote for repairments if needed."
@@ -115,6 +118,7 @@
             "id": 4,
             "date_created": "2023-11-28T09:30+01:00",
             "date_to_complete": "2023-12-13T09:30+01:00",
+            "company": "Rijkshuizen en Zn.",
             "jobSpecification": "modification",
             "location": "The Hague",
             "notes": "Renter modified main water tap in order to fit in a washing machine. Make an inspection of the adjusted water tap and confirm it's up to standards."

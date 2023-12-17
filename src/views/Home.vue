@@ -4,7 +4,7 @@
                 <PersonalInfoCard />
                 <ion-row>
                     <ion-col>
-                        <ion-card>
+                        <ion-card router-link="/jobs/scheduled">
                             <ion-card-content>
                                 <ion-icon :icon="calendarNumberOutline"></ion-icon>
                                 <ion-card-subtitle class="bold">Scheduled</ion-card-subtitle>
@@ -31,7 +31,7 @@
                     </ion-col>
                     <ion-col>
                         <ion-card>
-                             <ion-card-content>
+                             <ion-card-content router-link="/settings">
                                 <ion-icon :icon="informationCircleOutline"></ion-icon>
                                 <ion-card-subtitle class="bold">Settings</ion-card-subtitle>
                             </ion-card-content>

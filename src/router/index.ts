@@ -20,18 +20,20 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/CompletedJobs.vue')
       },
       {
-        path: '/jobs/completed/:id',
-        name: 'completedJob',
-        component: () => import('@/views/CompletedIndividualJob.vue'),
-        props: true,
-      },
-      {
         path: '/knowledge-base',
         component: () => import('@/views/KnowledgeBase.vue')
       }, 
       {
         path: '/settings',
         component: () => import('@/views/Settings.vue')
+      },
+      {
+        path: '/jobs/scheduled',
+        component: () => import('@/views/ScheduledJobsOverview.vue')
+      },
+      {
+        path: 'andrewtesting',
+        component: () => import('@/views/ExecuteJob.vue')
       }
     ],
   },

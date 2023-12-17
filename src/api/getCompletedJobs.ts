@@ -3,7 +3,7 @@ import { JSON_DB_BASE_URL } from '@/utils/constants';
 
 export const getCompletedJobs = async () => {
 
-    const completedJobsUrl = `${JSON_DB_BASE_URL}/jobs/`; // Replace later with .env file
+    const completedJobsUrl = `${JSON_DB_BASE_URL}/jobs/`; 
     console.log(completedJobsUrl);
     try {
         const response = await axios.get(completedJobsUrl);

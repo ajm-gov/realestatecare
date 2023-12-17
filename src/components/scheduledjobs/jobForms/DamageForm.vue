@@ -41,7 +41,7 @@
         IonItem,
         IonCheckbox,
         IonSelect,
-        IonDateTime,
-        IonTextArea
+        IonDatetime,
+        IonTextarea
     } from '@ionic/vue';
 </script>

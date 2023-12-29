@@ -10,11 +10,11 @@
                     <ion-card-content>
                         <div class="locationcontainer">
                             <ion-icon :icon="navigateCircleOutline"></ion-icon>
-                            <ion-label>{{ item.location }}</ion-label>
+                            <ion-label>{{ item.city }}</ion-label>
                         </div>
                         {{ item.notes }}
                     </ion-card-content>
-                    <ion-button fill="clear">Start job</ion-button>
+                    <ion-button fill="clear" @click="navigateToReportForm(item)">Start job</ion-button>
                 </ion-card>
             </ion-col>
         </ion-row>
@@ -54,6 +54,7 @@ import { ref, onMounted } from 'vue';
 import { scheduledJob } from '@/types/scheduledJob';
 import {readableDate} from '@/utils/readDate';
 import { getScheduledJobs } from '@/api/getScheduledJobs';
+import router from '@/router';
 
 const scheduledJobs = ref<scheduledJob[]>([]);
 
@@ -66,6 +67,11 @@ onMounted(async () => {
 
     }
 })
+
+const navigateToReportForm = (job: scheduledJob) => {
+    const route = { name: 'damage-form', params: { jobId: job.id}};
+    router.push(route)
+}
 
 
 </script>

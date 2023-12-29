@@ -32,8 +32,14 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/ScheduledJobsOverview.vue')
       },
       {
-        path: 'andrewtesting',
-        component: () => import('@/views/ExecuteJob.vue')
+        path: 'andrewtesting', // Delete Later
+        component: () => import('@/components/LoadingScreen.vue') // Delete LAter
+      },
+      {
+        path: '/job-forms/damage/:jobId',
+        name: 'damage-form',
+        component: () => import('@/views/ExecuteJob.vue'),
+        props: true,
       }
     ],
   },

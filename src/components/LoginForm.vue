@@ -97,7 +97,7 @@
 
 
     ion-input, ion-button {
-        width: 80%;
+        width: 95%;
     }
 </style>
 

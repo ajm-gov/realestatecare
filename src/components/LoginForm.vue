@@ -113,7 +113,8 @@ import {
   IonInput,
   IonButton,
   IonAlert,
-  IonActionSheet
+  IonActionSheet,
+  toastController
 } from '@ionic/vue';
 
 import { 
@@ -188,6 +189,14 @@ const loginUser = async () => {
     if (loginStatusStore().loggedIn) {
         console.log("Succesful login!");
         router.push("/home")
+    } else {
+        const errorToast = await toastController.create({
+            message: "Login failed! Please try again with correct credentials",
+            duration: 5000,
+            position: "middle",
+        });
+
+        await errorToast.present();
     }
 }
 

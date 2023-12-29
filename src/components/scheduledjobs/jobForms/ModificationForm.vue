@@ -1,7 +1,7 @@
 <template>
     <LoadingScreen v-if="isLoading" />
     <div v-if="!isLoading" class="contentPadding">
-    <ion-title>Damage Report Form</ion-title>
+    <ion-title>Modification Form</ion-title>
     <form>
         <ion-list>
                 <ion-input v-model="individualJobDetail.company" label-placement="stacked" fill="outline" label="Company Name"/>
@@ -9,17 +9,19 @@
                 <ion-input v-model="individualJobDetail.postal_code" label-placement="stacked" fill="outline" label="Postal Code" />
                 <ion-input v-model="individualJobDetail.province" label-placement="stacked" fill="outline" label="Province" />
                 <ion-input v-model="individualJobDetail.housenumber" label-placement="stacked" fill="outline" label="Housenumber" />
-                <ion-checkbox label-placement="end" justify="start">New Damage?</ion-checkbox>
-                <ion-select label="Damage Type">
-                    <ion-select-option value="deliberate">Deliberate</ion-select-option>
-                    <ion-select-option value="wear">Wear</ion-select-option>
-                    <ion-select-option value="violence">Violence</ion-select-option>
-                    <ion-select-option value="normal-use">Normale Use</ion-select-option>
-                    <ion-select-option value="calamity">Calamity</ion-select-option>
-                    <ion-select-option value="other">Other</ion-select-option>
+                <ion-input label-placement="stacked" fill="outline" label="Existing/documented modifications (link to PDF)" />
+                <ion-select label-placement="floating" label="Modification executed by">
+                    <ion-select-option value="renter">Renter</ion-select-option>
+                    <ion-select-option value="certified-contractor">Certified Contractor</ion-select-option>
+                    <ion-select-option value="unknown">Unknown</ion-select-option>
                 </ion-select>
-                <ion-datetime></ion-datetime>
-                <ion-checkbox label-placement="end" justify="start">Demands immediate attention</ion-checkbox>
+                <ion-checkbox label-placement="end" justify="start">Approved?</ion-checkbox>
+                <ion-select label-placement="floating" label="Actions to be taken">
+                    <ion-select-option value="accept">Accept modification</ion-select-option>
+                    <ion-select-option value="certified-inspection">Schedule official inspection</ion-select-option>
+                    <ion-select-option value="remove-modification">Remove modification</ion-select-option>
+                    <ion-select-option value="adjust-modification">Adjust modification and schedule official inspection</ion-select-option>
+                </ion-select>
                 <ion-textarea :auto-grow="true" v-model="individualJobDetail.notes" label="Notes"></ion-textarea>
                 <AddImageToReport />
                 <ion-button type="submit">Complete Report</ion-button>

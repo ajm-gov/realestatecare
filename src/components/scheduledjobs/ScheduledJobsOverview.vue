@@ -34,12 +34,9 @@
 <script setup lang="ts">
 import { 
     IonCard, 
-    IonBadge,
     IonLabel,
     IonRow,
     IonCol,
-    IonAvatar,
-    IonChip,
     IonCardTitle,
     IonCardHeader,
     IonCardSubtitle,
@@ -69,7 +66,26 @@ onMounted(async () => {
 })
 
 const navigateToReportForm = (job: scheduledJob) => {
-    const route = { name: 'damage-form', params: { jobId: job.id}};
+    const jobType = job.jobSpecification;
+    let routeName: string;
+    switch(jobType) {
+        case 'damage':
+            routeName = 'damage-form'
+            break;
+        case 'maintenance':
+            routeName = 'maintenance-form'
+            break;
+        case 'inspection':
+            routeName = 'inspection-form'
+            break;
+        case 'modification':
+            routeName = 'modification-form'
+            break;
+        default:
+            routeName = "";
+    }
+
+    const route = { name: routeName, params: { jobId: job.id}};
     router.push(route)
 }
 

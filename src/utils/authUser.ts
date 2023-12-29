@@ -3,7 +3,6 @@ import { getAllUsers } from "@/api/getUsers";
 import { loginStatusStore } from "@/stores/loginStatus";
 import { userDetailsStore } from "@/stores/userDetails";
 
-
 export async function authenticateUser(email: string, password: string, authCode: string) {
     const existingUsers = await getAllUsers();
 

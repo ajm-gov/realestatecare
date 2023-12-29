@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import { loginStatusStore } from '@/stores/loginStatus';
+import { userDetailsStore } from '@/stores/userDetails';
+import Cookies from 'js-cookie';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -73,20 +75,26 @@ const router = createRouter({
   routes
 })
 
-// // Authentication middleware
-// router.beforeEach(async (to, from, next) => {
-//   const store = loginStatusStore();
-//   console.log(store)
-//   if (!store.loggedIn && to.name !== "loginScreen") {
-//     console.log('Redirecting to login')
-//     next("/auth/login")
-//   } else if (store.loggedIn && to.name === "loginScreen") {
-//     console.log('Home')
-//     next("/home")
-//   } else {
-//     console.log('Allowing navigation')
-//     next()
-//   }
-// })
+// Authentication middleware
+router.beforeEach(async (to, from, next) => {
+  const store = loginStatusStore();
+  const userStore = userDetailsStore();
+
+  if (Cookies.get('authenticated-user') === "true" && Cookies.get('userFirstName')) {
+    loginStatusStore().loginUser()
+    userStore.setUserInfo(Cookies.get('userFirstName') as string, Cookies.get('userLastName') as string)
+  }
+
+  if (!store.loggedIn && to.name !== "loginScreen") {
+    console.log('Redirecting to login')
+    next("/auth/login")
+  } else if (store.loggedIn && to.name === "loginScreen") {
+    console.log('Home')
+    next("/home")
+  } else {
+    console.log('Allowing navigation')
+    next()
+  }
+})
 
 export default router

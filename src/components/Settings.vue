@@ -22,6 +22,7 @@
                 <ion-select-option value="orange">1 hour before occasion</ion-select-option>
             </ion-select>
         </ion-item>
+        <ion-button expand="full" @click="() => logOutUser()">Log Out Current User</ion-button>
     </ion-list>
 </template>
 
@@ -32,19 +33,31 @@ import {
     IonList,
     IonItem,
     IonAvatar,
-    IonLabel
+    IonLabel,
+    IonButton
 } from '@ionic/vue';
 
 import { userDetailsStore } from '@/stores/userDetails';
+import { loginStatusStore } from '@/stores/loginStatus';
+import router from '@/router';
 
-const store = userDetailsStore();
+
+const userStore = userDetailsStore();
+const loginStore = loginStatusStore();
 
 const userName = () => {
-    if (store.firstName !== "") {
-        return store.firstName
+    if (userStore.firstName !== "" && userStore.lastName !== "") {
+        return `${userStore.firstName} ${userStore.lastName}`
     } else {
         return "User"
     }
+}
+
+const logOutUser = () => {
+    loginStore.logoutUser();
+    router.push({
+        name: 'loginScreen'
+    });
 }
 
 </script>

@@ -21,6 +21,8 @@
                 <ion-datetime></ion-datetime>
                 <ion-checkbox label-placement="end" justify="start">Demands immediate attention</ion-checkbox>
                 <ion-textarea v-model="individualJobDetail.notes" label="Notes"></ion-textarea>
+                <ion-button @click="openCamera">Open Camera</ion-button>
+                <ion-button @click="openGallery">Select from Gallery</ion-button>
         </ion-list>
     </form>
     </div>
@@ -47,6 +49,7 @@
         IonDatetime,
         IonTextarea,
         IonTitle,
+        IonButton
     } from '@ionic/vue';
     import { ref, onMounted } from 'vue';
     import { useRoute } from 'vue-router';
@@ -57,6 +60,14 @@
     import { getIndividualScheduledJob } from '@/api/getScheduledJobs';
     import { baseScheduledJob } from '@/types/scheduledJob';
     import LoadingScreen from '@/components/LoadingScreen.vue';
+    import { openCamera, openGallery } from "@/utils/openPhoneCamera";
+
+    const capturedImage = ref<string | null>(null);
+
+    const handleCapture = async (captureFunction: () => Promise<string>) => {
+        const imageData = await captureFunction();
+        capturedImage.value = imageData;
+    };
 
     const individualJobDetail = ref<baseScheduledJob>({
         id: 0,

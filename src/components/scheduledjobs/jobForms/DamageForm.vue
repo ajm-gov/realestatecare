@@ -1,11 +1,14 @@
 <template>
+    <LoadingScreen v-if="isLoading" />
+    <div v-if="!isLoading" class="contentPadding">
+    <ion-title>Damage Report Form</ion-title>
     <form>
         <ion-list>
-                <ion-input label-placement="stacked" fill="outline" label="Company Name" />
-                <ion-input label-placement="stacked" fill="outline" label="City" />
-                <ion-input label-placement="stacked" fill="outline" label="Postal Code" />
-                <ion-input label-placement="stacked" fill="outline" label="Province" />
-                <ion-input label-placement="stacked" fill="outline" label="Housenumber" />
+                <ion-input v-model="individualJobDetail.company" label-placement="stacked" fill="outline" label="Company Name"/>
+                <ion-input v-model="individualJobDetail.city" label-placement="stacked" fill="outline" label="City" />
+                <ion-input v-model="individualJobDetail.postal_code" label-placement="stacked" fill="outline" label="Postal Code" />
+                <ion-input v-model="individualJobDetail.province" label-placement="stacked" fill="outline" label="Province" />
+                <ion-input v-model="individualJobDetail.housenumber" label-placement="stacked" fill="outline" label="Housenumber" />
                 <ion-checkbox label-placement="end" justify="start">New Damage?</ion-checkbox>
                 <ion-select label="Damage Type">
                     <ion-select-option value="deliberate">Deliberate</ion-select-option>
@@ -17,9 +20,10 @@
                 </ion-select>
                 <ion-datetime></ion-datetime>
                 <ion-checkbox label-placement="end" justify="start">Demands immediate attention</ion-checkbox>
-                <ion-textarea label="Notes"></ion-textarea>
+                <ion-textarea v-model="individualJobDetail.notes" label="Notes"></ion-textarea>
         </ion-list>
     </form>
+    </div>
 </template>
 
 <style scoped>
@@ -38,10 +42,50 @@
     import { 
         IonInput,
         IonList,
-        IonItem,
         IonCheckbox,
         IonSelect,
         IonDatetime,
-        IonTextarea
+        IonTextarea,
+        IonTitle,
     } from '@ionic/vue';
+    import { ref, onMounted } from 'vue';
+    import { useRoute } from 'vue-router';
+
+    const route = useRoute();
+    const jobId = ref(route.params.jobId);
+
+    import { getIndividualScheduledJob } from '@/api/getScheduledJobs';
+    import { baseScheduledJob } from '@/types/scheduledJob';
+    import LoadingScreen from '@/components/LoadingScreen.vue';
+
+    const individualJobDetail = ref<baseScheduledJob>({
+        id: 0,
+        company: '',
+        city: '',
+        postal_code: '',
+        province: '',
+        housenumber: 0,
+        additions: '',
+        street: '',
+        notes: '',
+    });
+
+    const isLoading = ref(true);
+
+    onMounted(async () => {
+        try {
+            const response = await getIndividualScheduledJob(Number(jobId.value));
+            individualJobDetail.value = response;
+            
+        } catch (error) {
+            console.error('Error fetching individual job details', error)
+        } finally {
+            setTimeout(() => {
+                isLoading.value = false;
+            }, 1000)
+        }
+        
+    });
+
+
 </script>

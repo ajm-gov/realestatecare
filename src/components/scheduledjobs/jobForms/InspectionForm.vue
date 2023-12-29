@@ -1,7 +1,7 @@
 <template>
     <LoadingScreen v-if="isLoading" />
     <div v-if="!isLoading" class="contentPadding">
-    <ion-title>Damage Report Form</ion-title>
+    <ion-title>Inspection Form</ion-title>
     <form>
         <ion-list>
                 <ion-input v-model="individualJobDetail.company" label-placement="stacked" fill="outline" label="Company Name"/>
@@ -9,18 +9,30 @@
                 <ion-input v-model="individualJobDetail.postal_code" label-placement="stacked" fill="outline" label="Postal Code" />
                 <ion-input v-model="individualJobDetail.province" label-placement="stacked" fill="outline" label="Province" />
                 <ion-input v-model="individualJobDetail.housenumber" label-placement="stacked" fill="outline" label="Housenumber" />
-                <ion-checkbox label-placement="end" justify="start">New Damage?</ion-checkbox>
-                <ion-select label="Damage Type">
-                    <ion-select-option value="deliberate">Deliberate</ion-select-option>
-                    <ion-select-option value="wear">Wear</ion-select-option>
-                    <ion-select-option value="violence">Violence</ion-select-option>
-                    <ion-select-option value="normal-use">Normale Use</ion-select-option>
-                    <ion-select-option value="calamity">Calamity</ion-select-option>
+                <ion-select label="Installation Type">
+                    <ion-select-option value="cooling">Cooling</ion-select-option>
+                    <ion-select-option value="heating">Heating</ion-select-option>
+                    <ion-select-option value="ventilation">Ventilation/Air</ion-select-option>
+                    <ion-select-option value="electronics">Electronics</ion-select-option>
+                    <ion-select-option value="security">Security</ion-select-option>
                     <ion-select-option value="other">Other</ion-select-option>
                 </ion-select>
-                <ion-datetime></ion-datetime>
-                <ion-checkbox label-placement="end" justify="start">Demands immediate attention</ion-checkbox>
-                <ion-textarea :auto-grow="true" v-model="individualJobDetail.notes" label="Notes"></ion-textarea>
+                <ion-textarea 
+                    :auto-grow="true" 
+                    label-placement="stacked"
+                    fill="outline" 
+                    placeholder="Describe the issue"
+                    label="Reported Issues"
+                ></ion-textarea>
+                <ion-input label-placement="stacked" fill="outline" label="Link to testing procedure document (link to PDF)" />
+                <ion-checkbox label-placement="end" justify="start">Approved?</ion-checkbox>
+                <ion-textarea 
+                    :auto-grow="true" 
+                    v-model="individualJobDetail.notes" 
+                    label-placement="stacked" 
+                    label="Notes"
+                    fill="outline"    
+                ></ion-textarea>
                 <AddImageToReport />
                 <ion-button type="submit">Complete Report</ion-button>
         </ion-list>
@@ -41,7 +53,7 @@
     }
 
     ion-textarea {
-        min-height: 120px;
+        min-height: 150px;
     }
 
     input {

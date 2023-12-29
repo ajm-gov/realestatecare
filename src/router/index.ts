@@ -38,7 +38,25 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/job-forms/damage/:jobId',
         name: 'damage-form',
-        component: () => import('@/views/ExecuteJob.vue'),
+        component: () => import('@/views/ExecuteJobs/Damage.vue'),
+        props: true,
+      },
+      {
+        path: '/job-forms/inspection/:jobId',
+        name: 'inspection-form',
+        component: () => import('@/views/ExecuteJobs/Inspection.vue'),
+        props: true,
+      },
+      {
+        path: '/job-forms/maintenance/:jobId',
+        name: 'maintenance-form',
+        component: () => import('@/views/ExecuteJobs/Maintenance.vue'),
+        props: true,
+      },
+      {
+        path: '/job-forms/modification/:jobId',
+        name: 'modification-form',
+        component: () => import('@/views/ExecuteJobs/Modification.vue'),
         props: true,
       }
     ],

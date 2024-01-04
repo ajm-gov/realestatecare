@@ -2,7 +2,7 @@
     <LoadingScreen v-if="isLoading" />
     <div v-if="!isLoading" class="contentPadding">
     <ion-title>Modification Form</ion-title>
-    <form>
+    <form @submit.prevent="fakeFormSubmission">
         <ion-list>
                 <ion-input v-model="individualJobDetail.company" label-placement="stacked" fill="outline" label="Company Name"/>
                 <ion-input v-model="individualJobDetail.city" label-placement="stacked" fill="outline" label="City" />
@@ -78,6 +78,8 @@
     import LoadingScreen from '@/components/LoadingScreen.vue';
     import AddImageToReport from './AddImageToReport.vue';
 
+    import { fakeFormSubmission } from './utils/formCompletion';
+
     const capturedImage = ref<string | null>(null);
 
     const individualJobDetail = ref<baseScheduledJob>({
@@ -109,4 +111,4 @@
         
     });
 
-</script>
+</script>./utils/formCompletion

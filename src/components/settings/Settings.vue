@@ -2,7 +2,7 @@
     <ion-list>
         <ion-item>
             <ion-avatar slot="start">
-                <img src="@/assets/img/fred.jpeg" width="">
+                <img src="@/assets/img/fred.jpeg" width="" alt="User Profile Picture">
             </ion-avatar>
             <ion-label>
                 {{ userName() }}
@@ -22,8 +22,17 @@
                 <ion-select-option value="orange">1 hour before occasion</ion-select-option>
             </ion-select>
         </ion-item>
+        <ion-item>
+            <ion-checkbox justify="space-between">Mute Notifications outside working hours</ion-checkbox>
+        </ion-item>
+        <ion-item id="change-password" expand="block">
+            <ion-icon slot="end" :icon="arrowForwardOutline"></ion-icon>
+            <ion-label>Change Password</ion-label>
+        </ion-item>
+        <ChangePassword />
         <ion-button expand="full" @click="() => logOutUser()">Log Out Current User</ion-button>
     </ion-list>
+
 </template>
 
 <script setup lang="ts">
@@ -34,9 +43,15 @@ import {
     IonItem,
     IonAvatar,
     IonLabel,
-    IonButton
+    IonButton,
+    IonCheckbox,
 } from '@ionic/vue';
 
+import { 
+  arrowForwardOutline,
+} from 'ionicons/icons';
+
+import ChangePassword from './parts/ChangePassword.vue';
 import { userDetailsStore } from '@/stores/userDetails';
 import { loginStatusStore } from '@/stores/loginStatus';
 import router from '@/router';

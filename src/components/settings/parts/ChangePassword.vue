@@ -99,7 +99,7 @@
             const successToast = await toastController.create({
                 message: 'Password change successful!',
                 duration: 3000,
-                postiion: 'top'
+                position: 'top'
             });
 
             await successToast.present();

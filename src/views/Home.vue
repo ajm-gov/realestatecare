@@ -24,7 +24,7 @@
                     <ion-col>
                         <ion-card router-link="/knowledge-base">
                             <ion-card-content>
-                                <ion-icon :icon="settingsSharp"></ion-icon>
+                                <ion-icon :icon="informationCircleOutline"></ion-icon>
                                 <ion-card-subtitle class="bold">Knowledge Base</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
@@ -32,13 +32,13 @@
                     <ion-col>
                         <ion-card>
                              <ion-card-content router-link="/settings">
-                                <ion-icon :icon="informationCircleOutline"></ion-icon>
+                                <ion-icon :icon="settingsSharp"></ion-icon>
                                 <ion-card-subtitle class="bold">Settings</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
                     </ion-col>
                 </ion-row>
-            </ion-content>
+            </ion-content>informationCircleOutline
     </Layout>
 </template>
 

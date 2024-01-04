@@ -4,7 +4,7 @@
             <ion-row>
                 <ion-chip>
                     <ion-avatar>
-                        <img src="@/assets/img/fred.jpeg" width="">
+                        <img src="@/assets/img/fred.jpeg" width="" alt="User's profile image">
                     </ion-avatar>
                     <ion-label class="bold" color="light">{{ nameString() }}</ion-label>
                 </ion-chip>

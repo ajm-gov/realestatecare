@@ -12,11 +12,6 @@
             <ion-icon aria-hidden="true" :icon="shieldCheckmarkOutline" />
             <ion-label>Completed Jobs</ion-label>
           </ion-tab-button>
-  
-          <ion-tab-button tab="tab3" href="/tabs/tab3">
-            <ion-icon aria-hidden="true" :icon="gridOutline" />
-            <ion-label>Menu</ion-label>
-          </ion-tab-button>
         </ion-tab-bar>
       </ion-tabs>
     </ion-page>
@@ -36,7 +31,6 @@
   import { 
     shieldCheckmarkOutline, 
     calendarNumberOutline, 
-    gridOutline
 } from 'ionicons/icons';
   </script>
   

@@ -1,14 +1,16 @@
 <template>
     <ion-grid>
+        <ion-title>Knowledge Base</ion-title>
         <ion-row>
             <ion-col>
                 <ion-card>
                     <ion-card-header>
-                        <ion-card-title>Logging a report</ion-card-title>
+                        <ion-card-title>Changing the settings</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
-                        Small description of the content, blablabla.
+                        <ion-label>Explanation of how to change your user settings</ion-label>
                     </ion-card-content>
+                    <ion-button fill="clear" @click="router.push('/knowledge-base/changing-password')">Read Article</ion-button>
                 </ion-card>
             </ion-col>
         </ion-row>
@@ -16,11 +18,12 @@
             <ion-col>
                 <ion-card>
                     <ion-card-header>
-                        <ion-card-title>Logging a report</ion-card-title>
+                        <ion-card-title>Filling out a Damange Report</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
-                        Small description of the content, blablabla.
+                        Use the Real Estate Care App to fill out a damage report
                     </ion-card-content>
+                    <ion-button fill="clear" @click="router.push('/knowledge-base/changing-password')">Read Article</ion-button>
                 </ion-card>
             </ion-col>
         </ion-row>
@@ -28,11 +31,12 @@
             <ion-col>
                 <ion-card>
                     <ion-card-header>
-                        <ion-card-title>Logging a report</ion-card-title>
+                        <ion-card-title>Filling out a Maintenance Report</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
-                        Small description of the content, blablabla.
+                        Use the Real Estate Care App to fill out a maintenance report
                     </ion-card-content>
+                    <ion-button fill="clear" @click="router.push('/knowledge-base/changing-password')">Read Article</ion-button>
                 </ion-card>
             </ion-col>
         </ion-row>
@@ -40,11 +44,12 @@
             <ion-col>
                 <ion-card>
                     <ion-card-header>
-                        <ion-card-title>Logging a report</ion-card-title>
+                        <ion-card-title>Changing your Password</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
-                        Small description of the content, blablabla.
+                        Changing your Real Estate Care App Password
                     </ion-card-content>
+                    <ion-button fill="clear" @click="router.push('/knowledge-base/changing-password')">Read Article</ion-button>
                 </ion-card>
             </ion-col>
         </ion-row>
@@ -54,15 +59,17 @@
 
 <script setup lang="ts">
     import {
-        IonSearchbar,
-        IonText,
         IonCol,
         IonRow,
         IonGrid,
         IonCard,
         IonCardContent,
         IonCardHeader,
-        IonCardSubtitle,
-        IonCardTitle
+        IonTitle,
+        IonCardTitle,
+        IonLabel,
+        IonButton
     } from "@ionic/vue"
+
+    import router from "@/router"
 </script>

@@ -9,7 +9,7 @@
                 <ion-input v-model="individualJobDetail.postal_code" label-placement="stacked" fill="outline" label="Postal Code" />
                 <ion-input v-model="individualJobDetail.province" label-placement="stacked" fill="outline" label="Province" />
                 <ion-input v-model="individualJobDetail.housenumber" label-placement="stacked" fill="outline" label="Housenumber" />
-                <ion-checkbox label-placement="end" justify="start">New Damage?</ion-checkbox>
+                <DateTimePicker />
                 <ion-select label="Damage Type">
                     <ion-select-option value="deliberate">Deliberate</ion-select-option>
                     <ion-select-option value="wear">Wear</ion-select-option>
@@ -18,9 +18,15 @@
                     <ion-select-option value="calamity">Calamity</ion-select-option>
                     <ion-select-option value="other">Other</ion-select-option>
                 </ion-select>
-                <ion-datetime></ion-datetime>
-                <ion-checkbox label-placement="end" justify="start">Demands immediate attention</ion-checkbox>
-                <ion-textarea :auto-grow="true" v-model="individualJobDetail.notes" label="Notes"></ion-textarea>
+                <ion-checkbox label-placement="start" justify="space-between">New Damage?</ion-checkbox>
+                <ion-checkbox label-placement="start" justify="space-between">Demands immediate attention</ion-checkbox>
+                <ion-textarea 
+                    :auto-grow="true" 
+                    label-placement="stacked"
+                    fill="outline"    
+                    v-model="individualJobDetail.notes" 
+                    label="Notes"
+                ></ion-textarea>
                 <AddImageToReport />
                 <ion-button type="submit">Complete Report</ion-button>
         </ion-list>
@@ -74,8 +80,8 @@
     import { getIndividualScheduledJob } from '@/api/getScheduledJobs';
     import { baseScheduledJob } from '@/types/scheduledJob';
     import LoadingScreen from '@/components/LoadingScreen.vue';
-    import AddImageToReport from './AddImageToReport.vue';
-
+    import AddImageToReport from './parts/AddImageToReport.vue';
+    import DateTimePicker from './parts/DateTimePicker.vue';
     import { fakeFormSubmission } from './utils/formCompletion';
 
     const capturedImage = ref<string | null>(null);
@@ -109,4 +115,4 @@
         
     });
 
-</script>./utils/formCompletion
+</script>

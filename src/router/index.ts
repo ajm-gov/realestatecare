@@ -23,7 +23,11 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: '/knowledge-base',
-        component: () => import('@/views/KnowledgeBase.vue')
+        component: () => import('@/views/KnowledgeBase/Overview.vue')
+      },
+      {
+        path: '/knowledge-base/changing-password',
+        component: () => import('@/views/KnowledgeBase/Sample.vue')
       }, 
       {
         path: '/settings',
@@ -32,10 +36,6 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/jobs/scheduled',
         component: () => import('@/views/ScheduledJobsOverview.vue')
-      },
-      {
-        path: 'andrewtesting', // Delete Later
-        component: () => import('@/components/LoadingScreen.vue') // Delete LAter
       },
       {
         path: '/job-forms/damage/:jobId',

@@ -15,14 +15,20 @@
                     <ion-select-option value="certified-contractor">Certified Contractor</ion-select-option>
                     <ion-select-option value="unknown">Unknown</ion-select-option>
                 </ion-select>
-                <ion-checkbox label-placement="end" justify="start">Approved?</ion-checkbox>
                 <ion-select label-placement="floating" label="Actions to be taken">
                     <ion-select-option value="accept">Accept modification</ion-select-option>
                     <ion-select-option value="certified-inspection">Schedule official inspection</ion-select-option>
                     <ion-select-option value="remove-modification">Remove modification</ion-select-option>
                     <ion-select-option value="adjust-modification">Adjust modification and schedule official inspection</ion-select-option>
                 </ion-select>
-                <ion-textarea :auto-grow="true" v-model="individualJobDetail.notes" label="Notes"></ion-textarea>
+                <ion-checkbox label-placement="start" justify="space-between">Approved?</ion-checkbox>
+                <ion-textarea 
+                    :auto-grow="true" 
+                    label-placement="stacked"
+                    fill="outline"
+                    v-model="individualJobDetail.notes" 
+                    label="Notes"
+                ></ion-textarea>
                 <AddImageToReport />
                 <ion-button type="submit">Complete Report</ion-button>
         </ion-list>
@@ -76,7 +82,7 @@
     import { getIndividualScheduledJob } from '@/api/getScheduledJobs';
     import { baseScheduledJob } from '@/types/scheduledJob';
     import LoadingScreen from '@/components/LoadingScreen.vue';
-    import AddImageToReport from './AddImageToReport.vue';
+    import AddImageToReport from './parts/AddImageToReport.vue';
 
     import { fakeFormSubmission } from './utils/formCompletion';
 

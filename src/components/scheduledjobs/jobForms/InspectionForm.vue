@@ -9,6 +9,7 @@
                 <ion-input v-model="individualJobDetail.postal_code" label-placement="stacked" fill="outline" label="Postal Code" />
                 <ion-input v-model="individualJobDetail.province" label-placement="stacked" fill="outline" label="Province" />
                 <ion-input v-model="individualJobDetail.housenumber" label-placement="stacked" fill="outline" label="Housenumber" />
+                <ion-checkbox label-placement="start" justify="space-between">Approved?</ion-checkbox>
                 <ion-select label="Installation Type">
                     <ion-select-option value="cooling">Cooling</ion-select-option>
                     <ion-select-option value="heating">Heating</ion-select-option>
@@ -25,7 +26,6 @@
                     label="Reported Issues"
                 ></ion-textarea>
                 <ion-input label-placement="stacked" fill="outline" label="Link to testing procedure document (link to PDF)" />
-                <ion-checkbox label-placement="end" justify="start">Approved?</ion-checkbox>
                 <ion-textarea 
                     :auto-grow="true" 
                     v-model="individualJobDetail.notes" 
@@ -86,7 +86,7 @@
     import { getIndividualScheduledJob } from '@/api/getScheduledJobs';
     import { baseScheduledJob } from '@/types/scheduledJob';
     import LoadingScreen from '@/components/LoadingScreen.vue';
-    import AddImageToReport from './AddImageToReport.vue';
+    import AddImageToReport from './parts/AddImageToReport.vue';
 
     import { fakeFormSubmission } from './utils/formCompletion';
 

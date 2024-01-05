@@ -25,7 +25,7 @@
                         <ion-card router-link="/knowledge-base">
                             <ion-card-content>
                                 <ion-icon :icon="informationCircleOutline"></ion-icon>
-                                <ion-card-subtitle class="bold">Knowledge Base</ion-card-subtitle>
+                                <ion-card-subtitle class="bold">Knowledgebase</ion-card-subtitle>
                             </ion-card-content>
                         </ion-card>
                     </ion-col>
@@ -38,7 +38,7 @@
                         </ion-card>
                     </ion-col>
                 </ion-row>
-            </ion-content>informationCircleOutline
+            </ion-content>
     </Layout>
 </template>
 

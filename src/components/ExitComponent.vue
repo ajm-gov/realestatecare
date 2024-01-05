@@ -5,6 +5,12 @@
     </ion-item>
 </template>
 
+<style scoped>
+    ion-item {
+        margin-bottom: 1rem;
+    }
+</style>
+
 <script setup lang="ts">
     import { 
         IonIcon,

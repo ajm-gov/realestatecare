@@ -55,3 +55,25 @@ The settings are just for demonstration purposes for the User Interface, and do 
 
 ### Knowledge Base
 Knowledge Base has some sample content and all Knowledge Base Article Cards lead to 1 Knowledge Base Article that is used as a demonstration. Future state would be integrated with a headless Content Management System so that Knowledge Base Articles could be managed there. 
+
+## Usability
+
+### Confirmation/Error actions
+
+Thanks to the ToastController of Ionic, I implemented various points in the application to give user feedback based on interaction. Think about confirmation/error actions at login, form submission, etc. 
+
+### User Control and freedom
+
+I found it important to add an easy way out in my application. I introduced the "ExitComponent" in my application, a simple reusable component to exit a current state of the app to a desired path. For example, when working on a scheduled job, at the top you can easily access the previous screen. Same for the knowledge base, it offers an easy way to go back to the home screen.
+
+### Consistency and standards
+
+By using Ionic, there is a lot of consistency between the used components, styling is coherent across the application.
+
+### Error handling
+
+All errors that could occur from retrieving/posting API calls are caught in the console for debugging. 
+
+## WCAG 2.1 Guidelines
+
+Thanks to the use of Ionic as a framework, a lot of the WCAG 2.1 Guidelines have been implemented at the start of the application. Aria labels and roles have been assigned to the various elements within the web application. Google Lighthouse Accessibility Mode has been used to assess the Accessibility Guidelines and current implementation of the application seems to pass all Google Lighthouse Accessibility Checks. 
